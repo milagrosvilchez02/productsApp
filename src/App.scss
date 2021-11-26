@@ -1,0 +1,42 @@
+@import '../src/styles/Product.scss';
+@import '../src/styles/Products.scss';
+@import '../src/styles/Header.scss';
+@import '../src/styles/LoginForm.scss';
+@import '../src/styles/Input.scss';
+
+html {
+    height: 100%;
+}
+
+body {
+    background: rgb(169,177,170);
+    background: linear-gradient(0deg, rgba(169,177,170,1) 0%, rgba(0,51,117,1) 73%, rgba(0,51,117,1) 100%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

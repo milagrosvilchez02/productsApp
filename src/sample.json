@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1000,
+        "name": "Smartphone",
+        "description": "iPhone 13 pro max",
+        "image_url": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000",
+        "price": "US$ 3000"
+    },
+    {
+        "id": 1001,
+        "name": "Sneakers",
+        "description": "Nike air max 97",
+        "image_url": "https://www.kindpng.com/picc/m/31-316334_nike-air-max-97-hd-png-download.png",
+        "price": "US$ 4000"
+    }
+]

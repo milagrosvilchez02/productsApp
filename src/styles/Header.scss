@@ -1,0 +1,52 @@
+.header {
+    background-color: rgb(0, 51, 117);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-family: 'Stick No Bills', sans-serif;
+    color: white;
+    height: 10vh;
+}
+
+.header-title {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    h2 {
+        margin: 0px 0px 0px 10px;
+        font-size: 40px;
+    }
+    img {
+        width: 50px;
+    }
+}
+
+.header-title:hover {
+    cursor: pointer;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    margin-right: 25px;
+    font-size: 25px;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 700px) {
+    .header {
+        margin-top: 10px; 
+        padding: 0px 40px 0px 40px;       
+    }
+    .header-title {
+        width: fit-content;
+        img {
+            width: 70px;
+        }
+    }
+}
