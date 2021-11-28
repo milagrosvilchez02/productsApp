@@ -13,10 +13,9 @@ const Header = ({ onLoadLogIn, showLink, onReturn, admin }) => {
     <div className="header">
       <div className="header-title" onClick={handleReturn}>
         <img
-          src="https://img.icons8.com/fluency/80/000000/shopping-bag.png"
+          src="https://redragon.es/content/uploads/2021/04/logo.svg"
           alt="icon"
         />
-        <h2>mercado</h2>
       </div>
       {showLink && (
         <div className="login" onClick={handleClick}>

@@ -15,11 +15,13 @@ class LoginForm extends Form {
 
   doSubmit = () => {
     // call the server
-    console.log("Submitted");
     this.props.onAdminView();
   };
 
   render() {
+    const handleReturn = () => {
+      this.props.onReturn();
+    };
     return (
       <div className="login-container">
         <h1>Login</h1>
@@ -28,6 +30,9 @@ class LoginForm extends Form {
           {this.renderInput("password", "Password", "password")}
           {this.renderButton("Login")}
         </form>
+        <button className="button" onClick={handleReturn}>
+          BACK
+        </button>
       </div>
     );
   }

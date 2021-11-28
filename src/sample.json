@@ -1,16 +1,51 @@
 [
     {
         "id": 1000,
-        "name": "Smartphone",
-        "description": "iPhone 13 pro max",
-        "image_url": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000",
-        "price": "US$ 3000"
+        "name": "Kumara K552",
+        "description": "El Dragonborn es un teclado mecánico 60%, compacto, robusto y súper transportable, con prestaciones óptimas para el juego competitivo de alto nivel: switches Redragon Brown, tecla Fn, bloqueo de tecla de Windows, cable desmontable y la mejor calidad de construcción.",
+        "image_url": "https://redragon.es/content/uploads/2021/07/DRAGONBORN.png",
+        "price": 5200
     },
     {
         "id": 1001,
-        "name": "Sneakers",
-        "description": "Nike air max 97",
-        "image_url": "https://www.kindpng.com/picc/m/31-316334_nike-air-max-97-hd-png-download.png",
-        "price": "US$ 4000"
+        "name": "SHIVA K512",
+        "description": "La cantidad de prestaciones que ofrece el Shiva es asombrosa: prácticamente todo lo que presumen los teclados mecánicos tope de gama, el Shiva lo tiene también.",
+        "image_url": "https://redragon.es/content/uploads/2021/04/SHIVA.png",
+        "price": 3500
+    },
+    {
+        "id": 1002,
+        "name": "DITI K585",
+        "description": "Teclado mecánico one-handed, con teclas macro dedicadas, USB pass-through, cable y reposamuñecas desmontables, RGB configurable en memoria interna y un diseño ergonómico único. Un teclado estrictamente para gamers.",
+        "image_url": "https://redragon.es/content/uploads/2021/04/DITI.png",
+        "price": 5000
+    },
+    {
+        "id": 1002,
+        "name": "DRACONIC K530",
+        "description": "Bacán, buenardo, chido, chulo, copado, fachero, molón, pintón; ¿cómo decirlo? El Draconic tiene un encanto especial. Es un teclado mecánico 60% dual mode: se puede usar en modo inalámbrico o conectado por cable USB-C. Y, además de bonito, es una bestia competitiva.",
+        "image_url": "https://redragon.es/content/uploads/2021/03/DRACONIC.png",
+        "price": 6900
+    },
+    {
+        "id": 1002,
+        "name": "DITI K585",
+        "description": "Teclado mecánico one-handed, con teclas macro dedicadas, USB pass-through, cable y reposamuñecas desmontables, RGB configurable en memoria interna y un diseño ergonómico único. Un teclado estrictamente para gamers.",
+        "image_url": "https://redragon.es/content/uploads/2021/04/DITI.png",
+        "price": 5000
+    },
+    {
+        "id": 1002,
+        "name": "DITI K585",
+        "description": "Teclado mecánico one-handed, con teclas macro dedicadas, USB pass-through, cable y reposamuñecas desmontables, RGB configurable en memoria interna y un diseño ergonómico único. Un teclado estrictamente para gamers.",
+        "image_url": "https://redragon.es/content/uploads/2021/04/DITI.png",
+        "price": 5000
+    },
+    {
+        "id": 1002,
+        "name": "DITI K585",
+        "description": "Teclado mecánico one-handed, con teclas macro dedicadas, USB pass-through, cable y reposamuñecas desmontables, RGB configurable en memoria interna y un diseño ergonómico único. Un teclado estrictamente para gamers.",
+        "image_url": "https://redragon.es/content/uploads/2021/04/DITI.png",
+        "price": 5000
     }
 ]
