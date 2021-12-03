@@ -25,15 +25,19 @@ function App() {
   };
 
   const handleAdminView = () => {
-    setState({ adminView: true, ...state });
+    setState({ ...state, adminView: true });
   };
 
   const handleEdit = (product) => {
-    setState({ displayProductForm: product, ...state });
+    setState({ ...state, displayProductForm: product });
   };
 
   const handleShowExtended = (product) => {
-    setState({ displayExtendedProduct: product });
+    setState({ ...state, displayExtendedProduct: product });
+  };
+
+  const handleUpdateProducts = () => {
+    setState({ ...state, displayProductForm: false });
   };
 
   return (
@@ -45,9 +49,7 @@ function App() {
         admin={state.adminView}
       />
       {!state.logInClicked && !state.displayExtendedProduct && (
-        <div>
-          <Products onShowExtended={handleShowExtended} onEdit={null} />
-        </div>
+        <Products onShowExtended={handleShowExtended} onEdit={null} />
       )}
       {state.logInClicked && !state.adminView && (
         <LoginForm onAdminView={handleAdminView} onReturn={handleReturn} />
@@ -56,7 +58,11 @@ function App() {
         <Products admin={true} onEdit={handleEdit} />
       )}
       {state.displayProductForm && (
-        <ProductForm product={state.displayProductForm} />
+        <ProductForm
+          product={state.displayProductForm}
+          onReturn={handleEdit}
+          updateProducts={handleUpdateProducts}
+        />
       )}
       {state.displayExtendedProduct && (
         <ProductDetails

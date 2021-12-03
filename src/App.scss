@@ -6,26 +6,21 @@
 @import '../src/styles/ProductDetails.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  padding: 0;
-  font-family: 'Cairo', sans-serif;
+body {
+    background-color: rgb(117, 32, 32);
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
 }
-
-.button {
+    
+button {
+    background-color: black;
+    margin: 4px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
     height: 5vh;
     outline: none;
-    border: none;
-    font-weight: bolder;
-    border-radius: 15px;
-    background-color: black;
-    color: rgb(255, 255, 255);
-}
-
-body {
-    background: rgb(169,177,170);
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(100, 34, 34) 50%, rgb(117, 0, 0) 100%);
 }
 
 body::-webkit-scrollbar-thumb {

@@ -1,51 +1,35 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+    background-color: rgb(97, 0, 0);
     color: white;
-    height: 10vh;
-    margin-top: 10px;
+    display: flex;
+    height: 9vh;
+    justify-content: space-between;
+    padding: 1vh 0vh 1vh 0vh;
 }
 
 .header-title {
     margin-left: 15px;
-    display: flex;
-    align-items: center;
     img {
         width: 100px;
-        padding-bottom: 15px;
     }
-}
-
-.header-title:hover {
-    cursor: pointer;
 }
 
 .login {
-    display: flex;
     align-items: center;
-    margin: 5px;
-    cursor: pointer;
-    margin-right: 25px;
+    display: flex;
     font-size: 25px;
-}
-
-.login:hover {
-    text-decoration: underline;
+    margin-right: 25px;
 }
 
 @media screen and (min-width: 700px) {
-    .header {
-        padding: 0px 40px 0px 40px;
-        overflow: hidden;
-    }
     .header-title {
-        float: left;        
-        img {
-            width: 100px;
-        }
+        cursor: pointer;
     }
+
     .login {
-        float: right;
+        cursor: pointer;
+    }
+    .login:hover {
+        text-decoration: underline;
     }
 }

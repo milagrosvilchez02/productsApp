@@ -4,7 +4,12 @@ import Form from "./Form";
 
 class ProductForm extends Form {
   state = {
-    data: { name: "", description: "", image_url: "", price: 0 },
+    data: {
+      name: this.props.product.name,
+      description: this.props.product.description,
+      image_url: this.props.product.image_url,
+      price: this.props.product.price,
+    },
     errors: {},
   };
 
@@ -15,21 +20,48 @@ class ProductForm extends Form {
     price: Joi.number().required().label("Price"),
   };
 
-  doSubmit = () => {
-    // call the server
-    console.log("Submitted");
-    this.props.onAdminView();
+  doSubmit = async () => {
+    if (this.props.product.id) {
+      await fetch(
+        `https://productsapp-backend.herokuapp.com/api/products/${this.props.product.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(this.state.data),
+        }
+      );
+    } else {
+      const data = await fetch(
+        `https://productsapp-backend.herokuapp.com/api/products/`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(this.state.data),
+        }
+      );
+    }
+
+    this.props.updateProducts();
   };
 
   render() {
+    const handleReturn = () => {
+      this.props.onReturn();
+    };
+
     return (
       <div className="login-container">
         <form onSubmit={this.handleSubmit} className="form">
           {this.renderInput("name", "Name")}
           {this.renderInput("description", "Description")}
-          {this.renderInput("imageUrl", "Image url")}
+          {this.renderInput("image_url", "Image url")}
           {this.renderInput("price", "Price")}
           {this.renderButton("Save")}
+          <button onClick={handleReturn}>BACK</button>
         </form>
       </div>
     );

@@ -22,10 +22,8 @@ const ProductDetails = ({ product, onReturn }) => {
       </div>
 
       <div className="buttons">
-        <button className="button" onClick={handleReturn}>
-          BACK
-        </button>
-        <a class="buy">Buy Now</a>
+        <button onClick={handleReturn}>BACK</button>
+        <a className="buy">Buy Now</a>
       </div>
     </React.Fragment>
   );

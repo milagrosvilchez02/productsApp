@@ -1,31 +1,34 @@
+.max-container {
+    display: flex;
+    justify-content: center;
+}
+
 .login-container {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-    margin: 10vw 10vw 0vw 10vw;
     height: 70vh;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.3);
+    justify-content: space-around;
+    margin-top: 10vh;
+    width: 95vw;
 }
 
 .form {
-    width: 70%;
-    height: 70%;
     display: flex;
     flex-direction: column;
+    height: 70%;
     justify-content: space-around;
-
+    width: 90%;
 }
 
 @media screen and (min-width: 700px) {
     .login-container {
-        width: 20vw;
-        margin: 24px 0px 0px 100px;
+        width: 50vw;
     }
     .form {
         width: 90%;
-        float: right;
     }
 }

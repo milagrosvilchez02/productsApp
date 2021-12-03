@@ -14,8 +14,7 @@ class LoginForm extends Form {
   };
 
   doSubmit = () => {
-    // call the server
-    this.props.onAdminView();
+    this.props.onAdminView(true);
   };
 
   render() {
@@ -23,16 +22,16 @@ class LoginForm extends Form {
       this.props.onReturn();
     };
     return (
-      <div className="login-container">
-        <h1>Login</h1>
-        <form onSubmit={this.handleSubmit} className="form">
-          {this.renderInput("username", "Username")}
-          {this.renderInput("password", "Password", "password")}
-          {this.renderButton("Login")}
-        </form>
-        <button className="button" onClick={handleReturn}>
-          BACK
-        </button>
+      <div className="max-container">
+        <div className="login-container">
+          <h1>Login</h1>
+          <form onSubmit={this.handleSubmit} className="form">
+            {this.renderInput("username", "Username")}
+            {this.renderInput("password", "Password", "password")}
+            {this.renderButton("Login")}
+          </form>
+          <button onClick={handleReturn}>BACK</button>
+        </div>
       </div>
     );
   }

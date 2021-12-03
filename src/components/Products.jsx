@@ -1,29 +1,38 @@
-import React, { useState } from "react";
-import products from "../sample.json";
+import React, { useEffect, useState } from "react";
 
 import Product from "./Product";
 
 const Products = ({ admin, onEdit, onShowExtended }) => {
   const [state, setState] = useState({
-    products: products,
-    currentPage: 1,
-    pageSize: 4,
-    sortColumn: { path: "title", order: "asc" },
+    products: null,
   });
 
-  // const getProducts = async () => {
-  //   const url = "http://localhost:3000/api/products";
-  //   const data = await fetch(url);
-  //   const products = await data.json();
-  //   setState({ products });
-  // };
+  useEffect(() => {
+    getProducts();
+  }, []);
 
-  // useState(() => {
-  //   getProducts();
-  // }, []);
+  const getProducts = async () => {
+    const data = await fetch(
+      "https://productsapp-backend.herokuapp.com/api/products/"
+    );
 
-  const handleEdit = (product) => {
+    const products = await data.json();
+    setState({ products });
+  };
+
+  const handleEdit = async (product) => {
     onEdit(product);
+  };
+
+  const handleDelete = async (id) => {
+    const data = await fetch(
+      `https://productsapp-backend.herokuapp.com/api/products/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+    const products = await data.json();
+    setState({ products });
   };
 
   const handleShowExtended = (product) => {
@@ -31,18 +40,25 @@ const Products = ({ admin, onEdit, onShowExtended }) => {
   };
 
   return (
-    <div className="products-container">
-      {admin && <a className="add">Add product</a>}
-      {/* {!state.products && <p>Loading...</p>} */}
-      {state.products &&
-        state.products.map((p) => (
-          <Product
-            product={p}
-            admin={admin}
-            onEdit={handleEdit}
-            onShowExtended={handleShowExtended}
-          />
-        ))}
+    <div className="main">
+      {admin && (
+        <a className="add" onClick={handleEdit}>
+          Add product
+        </a>
+      )}
+      <div className="products-container">
+        {!state.products && <p>Loading...</p>}
+        {state.products &&
+          state.products.map((p) => (
+            <Product
+              product={p}
+              admin={admin}
+              onEdit={handleEdit}
+              onShowExtended={handleShowExtended}
+              onDelete={handleDelete}
+            />
+          ))}
+      </div>
     </div>
   );
 };
